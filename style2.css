@@ -1,0 +1,98 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f6bbc;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background: #183a4e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 10px black ;
+}
+
+/* Contenedor de imágenes superpuestas */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-wrapper img.back {
+    z-index: 1;
+    opacity: 1;
+}
+
+.image-wrapper img.front {
+    z-index: 2;
+    opacity: 1;
+}
+
+.image-wrapper:hover img.front {
+    opacity: 0; /* Transparencia al pasar el cursor */
+
+}
+
+/* Títulos y texto */
+.card h3 {
+    margin: 15px;
+    font-size: 1.2em;
+    color: #956bcc;
+}
+
+.card p {
+    margin: 0 15px 20px;
+    color: #bebebe;
+}
+.TITULO h1{
+    font-size: 70px;
+    color:#adadad;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+}  
+nav ul li {
+    
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
